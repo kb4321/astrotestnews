@@ -18,7 +18,8 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'static',
+  adapter: netlify(),
+  output: 'server',
   integrations: [tailwind({
     applyBaseStyles: false
   }), sitemap(), mdx(), icon({
@@ -45,5 +46,4 @@ export default defineConfig({
       }
     }
   },
-  adapter: netlify()
 });
