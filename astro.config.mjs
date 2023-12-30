@@ -19,7 +19,7 @@ export default defineConfig({
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
   adapter: netlify(),
-  output: 'server',
+  output: 'hybrid',
   integrations: [tailwind({
     applyBaseStyles: false
   }), sitemap(), mdx(), icon({
